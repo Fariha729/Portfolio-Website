@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fariha Ahrar's web development portfolio.">
+    <title>Fariha Ahrar | Web Developer Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="#home">FA<span>.</span></a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <p class="eyebrow">Web development student</p>
+            <h1>Hello, I’m <span>Fariha Ahrar.</span></h1>
+            <p class="hero-copy">I build thoughtful, responsive websites with HTML, CSS, and Bootstrap.</p>
+            <a class="button" href="#projects">View my work</a>
+        </section>
+
+        <section id="about" class="content-section about">
+            <p class="eyebrow">About me</p>
+            <h2>Learning by building.</h2>
+            <p>I am a web development student creating clean, user-friendly websites. I enjoy turning ideas into organized HTML and CSS projects, then improving them with responsive layouts and interactive details.</p>
+        </section>
+
+        <section id="projects" class="content-section">
+            <p class="eyebrow">Featured projects</p>
+            <h2>Recent work</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <p class="project-number">01</p>
+                    <h3>The Pet Shop Website</h3>
+                    <p>A friendly multi-page pet-shop website built with HTML, images, video, and bookmark navigation.</p>
+                    <a href="https://github.com/Fariha729/HTML-AND-CSS-PROJECTS/tree/main/The-Pet-Shop-Website" target="_blank" rel="noreferrer">View project</a>
+                </article>
+                <article class="project-card">
+                    <p class="project-number">02</p>
+                    <h3>Simple Recipes</h3>
+                    <p>A responsive recipe website with smooth navigation, dropdown menus, and recipe sections.</p>
+                    <a href="https://github.com/Fariha729/HTML-AND-CSS-PROJECTS/tree/main/simple-recipes" target="_blank" rel="noreferrer">View project</a>
+                </article>
+                <article class="project-card">
+                    <p class="project-number">03</p>
+                    <h3>Academy Cinemas</h3>
+                    <p>A Bootstrap cinema website featuring responsive movie cards, showtimes, tickets, and contact sections.</p>
+                    <a href="https://github.com/Fariha729/HTML-AND-CSS-PROJECTS/tree/main/Academy-Cinemas" target="_blank" rel="noreferrer">View project</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="github" class="content-section github-section">
+            <p class="eyebrow">GitHub</p>
+            <h2>See more of my work.</h2>
+            <p>My repository includes HTML, CSS, Bootstrap, and JavaScript practice projects.</p>
+            <a class="button button-secondary" href="https://github.com/Fariha729/HTML-AND-CSS-PROJECTS" target="_blank" rel="noreferrer">Visit my GitHub</a>
+        </section>
+
+        <section id="contact" class="content-section contact-section">
+            <p class="eyebrow">Contact</p>
+            <h2>Let&rsquo;s work together.</h2>
+            <p>Have a question or would like to connect? Send me a message below.</p>
+            <form id="contact-form" class="contact-form">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button class="button" type="submit">Send message</button>
+                <p id="form-message" class="form-message" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fariha Ahrar. Built with HTML and CSS.</p>
+    </footer>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('form-message').textContent = 'Thanks for your message! I will get back to you soon.';
+            this.reset();
+        });
+    </script>
+</body>
+</html>
